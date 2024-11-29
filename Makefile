@@ -20,10 +20,18 @@ install-dev:
 clone:
 	python -m bin.clone
 
-# Ask something to GPT and use the VectorDB information.
-ask:
-	python -m bin.ask
+# Ask something to GPT and use the VectorDB information using base RAG architecture.
+base-ask:
+	python -m bin.base.ask
 
-# Insert data in the VectorDB.
-insert:
-	python -m bin.insert
+# Insert data in the VectorDB using base RAG architecture.
+base-insert:
+	python -m bin.base.insert
+
+# Ask something to GPT and use the VectorDB information using parent RAG architecture.
+parent-ask:
+	python -m bin.parent.ask
+
+# Insert data in the VectorDB using parent RAG architecture.
+parent-insert:
+	python -m bin.parent.insert

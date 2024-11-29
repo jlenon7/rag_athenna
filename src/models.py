@@ -12,5 +12,6 @@ def create_llm_model():
 def create_embedding_model():
   return OpenAIEmbeddings(
     api_key=environ.get("OPENAI_API_KEY"),
+    model="text-embedding-3-small",
     disallowed_special=()
   )

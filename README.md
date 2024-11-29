@@ -34,42 +34,34 @@ Clone the repositories you want the model to code review:
 make clone
 ```
 
-You can change the repositories you want to clone inside `bin/clone.py`. Also take a look inside `bin/insert.py`
-when calling `load_code_folder_chunks()` function to verify which paths and code languages you want to include in
-the VectorDB. You can also define files that you want to exclude.
+### Base RAG Architecture
 
 Insert the file chunks in Chroma database by running:
 
 ```shell
-make insert
+make base-insert
 ```
 
 Ask something by running the following:
 
 ```shell
-make ask
+make base-ask
 ```
 
-You can change your question inside `bin/ask.py`.
+You can change your question inside `bin/base/ask.py`.
 
-## Examples
+### Parent RAG Architecture
 
-> Question:
+Insert the file chunks in Chroma database by running:
 
-How I could change the routes directory in Athenna Framework?
-
-> Model Answer:
-
-To change the routes directory in Athenna Framework, you can update the `.athennarc.json` configuration file by modifying the `directories` property. By default, the routes directory is located at `"routes": "src/routes"`. 
-
-If you want to change the routes directory to a different location, you can simply update the `"routes"` key within the `directories` property to point to the new directory path. For example, if you want to change the routes directory to `"app/routes"`, you can update the configuration as follows:
-
-```json
-{
-  "directories": {
-    "routes": "app/routes"
-  }
-}
+```shell
+make parent-insert
 ```
 
-After updating the configuration file, Athenna will look for route files in the new directory specified in the `directories` property. Remember to run your application with the updated configuration for the changes to take effect.
+Ask something by running the following:
+
+```shell
+make parent-ask
+```
+
+You can change your question inside `bin/parent/ask.py`.

@@ -161,3 +161,6 @@ cython_debug/
 .DS_Store
 
 storage/repositories/**/
+storage/child_chunks
+storage/parent_chunks
+storage/text_index
