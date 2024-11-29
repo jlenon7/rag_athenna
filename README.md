@@ -2,6 +2,9 @@
 
 > Implementation of RAG techniques to teach GPT about Athenna Framework so he could answer any question that the developers might have.
 
+> [!TIP]
+> For more details about this repository check my blog post: [Using GPT with RAG to answer questions about Athenna](https://lenonsec.com/articles/01JDSEG9RA8HHSV7VBG2GXW9V4).
+
 ## Tools
 
 The project uses the following tools to work:
